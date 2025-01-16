@@ -1,0 +1,99 @@
+/* Reset default margin and padding for all elements, ensuring consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's width/height */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure body takes up at least the full height of the viewport */
+body {
+    background: linear-gradient(46deg,#005eff, #01ffd5);
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%; /* Ensure full width for body */
+    display: flex;
+    flex-direction: column; /* Allow for more flexible layout adjustments */
+}
+
+/* Main section styles */
+section {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+
+}
+
+/* Article styles */
+article {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    
+}
+
+/* Content container */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Reverse flex direction */
+.rev {
+    flex-direction: row-reverse;
+}
+
+/* Styled header */
+h1 {
+    margin: 10px;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.big{
+    width: 100%;
+}
+h1::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    left: 0;
+    bottom: -5px;
+}
+iframe{
+    box-shadow: #00000071 8px 8px 8px;
+    margin: 15px;
+    border-radius: 8px;
+    transition: 0.5s all;
+
+    width: 300px;
+    height: 200px;
+
+}
+iframe:hover{
+    transform: scale(1.1);
+    box-shadow: #00000071 16px 16px 16px;
+}
+
+
+@media (max-width: 1024px) {
+    section {
+        flex-direction: column;
+    }
+
+    article {
+        width: 100vw; 
+        
+    }
+    .rev{
+        flex-direction: row;
+    }
+    
+} 
